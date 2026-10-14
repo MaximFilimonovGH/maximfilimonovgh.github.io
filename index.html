@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr Maxim Filimonov | Research Associate</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['Newsreader', 'Georgia', 'serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+          },
+          colors: {
+            academic: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              200: '#bae0fd',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Font and Icon Imports -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    /* Custom scrollbar and smooth transitions */
+    html {
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    ::selection {
+      background-color: #bae0fd;
+      color: #0c4a6e;
+    }
+    .dark ::selection {
+      background-color: #0369a1;
+      color: #f0f7ff;
+    }
+  </style>
+</head>
+<body class="bg-[#fafaf9] text-stone-800 dark:bg-stone-950 dark:text-stone-100 font-sans antialiased selection:bg-academic-200">
+
+  <!-- Sticky Navigation Bar -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#fafaf9]/90 dark:bg-stone-950/90 border-b border-stone-200 dark:border-stone-800 transition-colors">
+    <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+      
+      <!-- Academic Identity Branding -->
+      <a href="#about" class="font-serif text-lg font-bold tracking-tight text-stone-900 dark:text-stone-50 hover:text-academic-700 dark:hover:text-academic-400 transition-colors">
+        Dr Maxim Filimonov
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-stone-600 dark:text-stone-300">
+        <a href="#about" class="hover:text-stone-900 dark:hover:text-white transition-colors">About</a>
+        <a href="#interests" class="hover:text-stone-900 dark:hover:text-white transition-colors">Key Interests</a>
+        <a href="#research" class="hover:text-stone-900 dark:hover:text-white transition-colors">Research Focus</a>
+        <a href="#publications" class="hover:text-stone-900 dark:hover:text-white transition-colors">Featured Publications</a>
+        <a href="#contact" class="hover:text-stone-900 dark:hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <!-- Theme Switcher and Mobile Menu Trigger -->
+      <div class="flex items-center space-x-3">
+        <button id="themeToggle" type="button" aria-label="Toggle theme" class="p-2 rounded-lg border border-stone-300 dark:border-stone-700 text-stone-600 dark:text-stone-300 hover:bg-stone-200/50 dark:hover:bg-stone-800 transition-colors focus:outline-none">
+          <i id="sunIcon" class="fa-solid fa-sun hidden text-amber-400"></i>
+          <i id="moonIcon" class="fa-solid fa-moon text-stone-600 dark:text-stone-300"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" type="button" aria-label="Open menu" class="md:hidden p-2 rounded-lg border border-stone-300 dark:border-stone-700 text-stone-600 dark:text-stone-300 hover:bg-stone-200/50 dark:hover:bg-stone-800 transition-colors">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 py-4 bg-[#fafaf9] dark:bg-stone-950 border-b border-stone-200 dark:border-stone-800 space-y-3 text-sm font-medium text-stone-700 dark:text-stone-300">
+      <a href="#about" class="mobile-nav-link block hover:text-academic-700 dark:hover:text-academic-400">About</a>
+      <a href="#interests" class="mobile-nav-link block hover:text-academic-700 dark:hover:text-academic-400">Key Interests</a>
+      <a href="#research" class="mobile-nav-link block hover:text-academic-700 dark:hover:text-academic-400">Research Focus</a>
+      <a href="#publications" class="mobile-nav-link block hover:text-academic-700 dark:hover:text-academic-400">Featured Publications</a>
+      <a href="#contact" class="mobile-nav-link block hover:text-academic-700 dark:hover:text-academic-400">Contact Details</a>
+    </div>
+  </header>
+
+  <!-- Main Academic Portfolio Container -->
+  <main class="max-w-4xl mx-auto px-6 py-12 md:py-16 space-y-16">
+
+    <!-- Section 1: Intro (Name, Photo, Bio, and Social Links) -->
+    <section id="about" class="flex flex-col-reverse md:flex-row items-center md:items-start justify-between gap-8 pt-4">
+      <div class="flex-1 space-y-4 text-center md:text-left">
+        <div>
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-academic-100 text-academic-800 dark:bg-academic-950 dark:text-academic-300 mb-2">
+            Postdoctoral Research Associate
+          </span>
+          <h1 class="text-3xl md:text-4xl font-serif font-bold text-stone-950 dark:text-stone-50 tracking-tight">
+            Dr Maxim Filimonov
+          </h1>
+          <p class="text-stone-600 dark:text-stone-400 font-medium text-sm md:text-base mt-1">
+            School of Computational and Mathematical Sciences &bull; Cardiff University
+          </p>
+        </div>
+
+        <p class="text-stone-700 dark:text-stone-300 leading-relaxed text-sm md:text-base">
+          I am a Research Associate within <strong>Cardiff NLP Group</strong> exploring the potential of NLP for real-world applications, as well as enhancing the understanding of NLP technology and language models.
+          I am dedicated to finding creative solutions and have a genuine curiosity and enthusiasm to work with a multi-disciplinary research team in computer science.
+        </p>
+
+        <p class="text-stone-600 dark:text-stone-400 text-xs md:text-sm leading-relaxed">
+          Previously, I completed my PhD in Model-Based Systems Engineering at Birmingham City University, and I have been working on a variety of projects as a Research Software Engineer at Cardiff University since 2020.
+        </p>
+
+        <!-- Scholarly Profiles and Social Media Links -->
+        <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-2 text-xs font-medium">
+          <a href="https://scholar.google.co.uk/citations?user=9DuUG54AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 text-stone-700 dark:text-stone-300 hover:border-academic-600 hover:text-academic-700 dark:hover:text-academic-400 shadow-sm transition-all">
+            <i class="fa-solid fa-graduation-cap text-academic-600"></i> Google Scholar
+          </a>
+          <a href="https://orcid.org/0000-0002-3144-9252" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 text-stone-700 dark:text-stone-300 hover:border-emerald-600 hover:text-emerald-700 dark:hover:text-emerald-400 shadow-sm transition-all">
+            <i class="fa-brands fa-orcid text-emerald-600"></i> ORCID
+          </a>
+          <a href="https://github.com/MaximFilimonovGH" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 text-stone-700 dark:text-stone-300 hover:border-stone-500 hover:text-stone-900 dark:hover:text-white shadow-sm transition-all">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/maxim-filimonov-83079864" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 text-stone-700 dark:text-stone-300 hover:border-blue-600 hover:text-blue-600 dark:hover:text-blue-400 shadow-sm transition-all">
+            <i class="fa-brands fa-linkedin text-blue-600"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <!-- Professional Profile Photo -->
+      <div class="flex-shrink-0">
+        <div class="relative w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden shadow-md ring-1 ring-stone-200 dark:ring-stone-800">
+          <img 
+            src="images/mf.jpg" 
+            alt="Dr. Maxim Filimonov"
+            onerror="this.src='https://placehold.co/400x400/e2e8f0/1e293b?text=Dr.+Maxim+Filimonov'"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Key Interests -->
+    <section id="interests" class="space-y-4 pt-4 border-t border-stone-200 dark:border-stone-800">
+      <div class="space-y-1">
+        <h2 class="text-xs uppercase tracking-widest font-semibold text-academic-700 dark:text-academic-400 font-mono">
+          Specializations & Topics
+        </h2>
+        <h3 class="text-2xl font-serif font-bold text-stone-900 dark:text-stone-100">
+          Key Interests
+        </h3>
+      </div>
+      
+      <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed max-w-3xl">
+        My academic interests bridge statistical learning theory and physically embodied robotic hardware:
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-2">
+        <div class="p-4 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900/60 shadow-sm">
+          <div class="text-academic-700 dark:text-academic-400 mb-2 text-lg">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h4 class="font-semibold text-sm text-stone-900 dark:text-stone-100">Software Engineering</h4>
+          <p class="text-xs text-stone-600 dark:text-stone-400 mt-1 leading-relaxed">Python, Machine Learning, Backend Development, RESTful APIs, System Architecture & Design.</p>
+        </div>
+
+        <div class="p-4 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900/60 shadow-sm">
+          <div class="text-academic-700 dark:text-academic-400 mb-2 text-lg">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <h4 class="font-semibold text-sm text-stone-900 dark:text-stone-100">Artificial Intelligence</h4>
+          <p class="text-xs text-stone-600 dark:text-stone-400 mt-1 leading-relaxed">NLP, LLMs & Transformers, Prompt Engineering, Vector Embeddings, Retrieval-Augmented Generation.</p>
+        </div>
+
+        <div class="p-4 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900/60 shadow-sm">
+          <div class="text-academic-700 dark:text-academic-400 mb-2 text-lg">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <h4 class="font-semibold text-sm text-stone-900 dark:text-stone-100">Data Science</h4>
+          <p class="text-xs text-stone-600 dark:text-stone-400 mt-1 leading-relaxed">Scientific Methodology & Experimental Design, Quantitative & Statistical Data Analysis, Peer-Reviewed Publications & Technical Writing.</p>
+        </div>
+
+        <div class="p-4 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900/60 shadow-sm">
+          <div class="text-academic-700 dark:text-academic-400 mb-2 text-lg">
+            <i class="fa-solid fa-atom"></i>
+          </div>
+          <h4 class="font-semibold text-sm text-stone-900 dark:text-stone-100">Database Development</h4>
+          <p class="text-xs text-stone-600 dark:text-stone-400 mt-1 leading-relaxed">NoSQL Database Management, MongoDB, Firebase, Relational Database Systems, SQL.</p>
+        </div>
+
+        <div class="p-4 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900/60 shadow-sm">
+          <div class="text-academic-700 dark:text-academic-400 mb-2 text-lg">
+            <i class="fa-solid fa-shapes"></i>
+          </div>
+          <h4 class="font-semibold text-sm text-stone-900 dark:text-stone-100">Model-Based Systems Engineering</h4>
+          <p class="text-xs text-stone-600 dark:text-stone-400 mt-1 leading-relaxed">MBSE, SysML, AML, Graph Theory, Knowledge Graphs, Semantic Ontologies.</p>
+        </div>
+
+        <div class="p-4 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900/60 shadow-sm">
+          <div class="text-academic-700 dark:text-academic-400 mb-2 text-lg">
+            <i class="fa-solid fa-arrows-split-up-and-left"></i>
+          </div>
+          <h4 class="font-semibold text-sm text-stone-900 dark:text-stone-100">Server Management & DevOps</h4>
+          <p class="text-xs text-stone-600 dark:text-stone-400 mt-1 leading-relaxed">Linux Systems Administration, Containerization & Composition, Docker, systemd.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Research Focus -->
+    <section id="research" class="space-y-6 pt-4 border-t border-stone-200 dark:border-stone-800">
+      <div class="space-y-1">
+        <h2 class="text-xs uppercase tracking-widest font-semibold text-academic-700 dark:text-academic-400 font-mono">
+          Research Focus
+        </h2>
+        <h3 class="text-2xl font-serif font-bold text-stone-900 dark:text-stone-100">
+          Current & Past Projects
+        </h3>
+      </div>
+
+      <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed max-w-3xl">
+        I have been involved in a variety of projects.
+      </p>
+
+      <div class="space-y-4">
+        <!-- Research Thrust 1 -->
+        <article class="p-6 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900/80 shadow-sm space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="text-xs font-mono font-semibold text-academic-700 dark:text-academic-400">
+              PROJECT 01 &bull; NLP & AI TEXT ANNOTATION
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
+              Active Focus
+            </span>
+          </div>
+
+          <h4 class="text-lg font-serif font-bold text-stone-900 dark:text-stone-100">
+            Automatic Text Annotation using LLMs
+          </h4>
+
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Web application for automatic annotation of text documents using custom labels.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3 pt-2 text-xs font-medium text-stone-600 dark:text-stone-300">
+            <span class="text-stone-400 dark:text-stone-500">Keywords:</span>
+            <span class="bg-stone-100 dark:bg-stone-800 px-2 py-0.5 rounded">NLP</span>
+            <span class="bg-stone-100 dark:bg-stone-800 px-2 py-0.5 rounded">LLM</span>
+            <span class="bg-stone-100 dark:bg-stone-800 px-2 py-0.5 rounded">Python Fullstack Development</span>
+          </div>
+        </article>
+
+        <!-- Research Thrust 2 -->
+        <article class="p-6 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900/80 shadow-sm space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="text-xs font-mono font-semibold text-academic-700 dark:text-academic-400">
+              PROJECT 02 &bull; GREAT
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-academic-100 text-academic-800 dark:bg-academic-950 dark:text-academic-300">
+              Cross-Disciplinary
+            </span>
+          </div>
+
+          <h4 class="text-lg font-serif font-bold text-stone-900 dark:text-stone-100">
+            Global Real-time Early Assessment of Tsunamis (GREAT)
+          </h4>
+
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Tsunami warning technology towards a global real-time analysis. The technology is based on the analysis of acoustic signals generated together with the tsunami, due to the compression of the water layer.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3 pt-2 text-xs font-medium text-stone-600 dark:text-stone-300">
+            <span class="text-stone-400 dark:text-stone-500">Keywords:</span>
+            <span class="bg-stone-100 dark:bg-stone-800 px-2 py-0.5 rounded">Python</span>
+            <span class="bg-stone-100 dark:bg-stone-800 px-2 py-0.5 rounded">Machine Learning</span>
+            <span class="bg-stone-100 dark:bg-stone-800 px-2 py-0.5 rounded">Acoustic-Gravity Waves</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 4: Featured Publications -->
+    <section id="publications" class="space-y-6 pt-4 border-t border-stone-200 dark:border-stone-800">
+      <div class="space-y-1">
+        <h2 class="text-xs uppercase tracking-widest font-semibold text-academic-700 dark:text-academic-400 font-mono">
+          Scholarship
+        </h2>
+        <h3 class="text-2xl font-serif font-bold text-stone-900 dark:text-stone-100">
+          Featured Publications
+        </h3>
+      </div>
+
+      <div class="space-y-5">
+
+        <!-- Publication 1 -->
+        <article class="pub-card p-5 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 space-y-2.5 shadow-sm">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded text-[11px] font-mono font-medium bg-academic-100 text-academic-800 dark:bg-academic-950 dark:text-academic-300">
+              Geoscientific Model Development
+            </span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400">
+              Journal Paper
+            </span>
+          </div>
+
+          <h4 class="text-base font-serif font-bold text-stone-900 dark:text-stone-50 leading-snug">
+            GREAT v1.0: Global Real-time Early Assessment of Tsunamis
+          </h4>
+
+          <p class="text-xs text-stone-600 dark:text-stone-400 leading-normal">
+            Usama Kadri, Ali Abdolali and <strong class="text-stone-900 dark:text-stone-200">Maxim Filimonov</strong>
+          </p>
+
+          <p class="text-xs font-serif text-stone-500 dark:text-stone-400 italic">
+            Geosci. Model Dev., 18, 3487&ndash;3507, 2025.
+          </p>
+
+          <!-- Links and BibTeX Toggle -->
+          <div class="flex flex-wrap items-center gap-3 pt-2 text-xs font-medium">
+            <span class="text-stone-300 dark:text-stone-700">&bull;</span>
+            <a href="https://doi.org/10.5194/gmd-18-3487-2025" target="_blank" rel="noopener noreferrer" class="text-academic-700 dark:text-academic-400 hover:underline">
+              <i class="fa-solid fa-file-pdf mr-1"></i> Paper DOI
+            </a>
+          </div>
+        </article>
+
+        <!-- Publication 2 -->
+        <article class="pub-card p-5 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 space-y-2.5 shadow-sm">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded text-[11px] font-mono font-medium bg-academic-100 text-academic-800 dark:bg-academic-950 dark:text-academic-300">
+              Natural Hazards and Earth System Sciences
+            </span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400">
+              Journal Paper
+            </span>
+          </div>
+
+          <h4 class="text-base font-serif font-bold text-stone-900 dark:text-stone-50 leading-snug">
+            Basin-scale geometric focusing: a probabilistic-geometric framework for global tsunami exposure assessment and the 2025 Kamchatka Peninsula tsunami
+          </h4>
+
+          <p class="text-xs text-stone-600 dark:text-stone-400 leading-normal">
+            Ali Abdolali, Michael-Angelo Y.-H. Lam, Usama Kadri, Matt Malej, <strong class="text-stone-900 dark:text-stone-200">Maxim Filimonov</strong>, and Fengyan Shi
+          </p>
+
+          <p class="text-xs font-serif text-stone-500 dark:text-stone-400 italic">
+            Nat. Hazards Earth Syst. Sci., 26, 3597&ndash;3616, 2026.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3 pt-2 text-xs font-medium">
+            <span class="text-stone-300 dark:text-stone-700">&bull;</span>
+            <a href="https://doi.org/10.5194/nhess-26-3597-2026" target="_blank" rel="noopener noreferrer" class="text-academic-700 dark:text-academic-400 hover:underline">
+              <i class="fa-solid fa-file-pdf mr-1"></i> Paper DOI
+            </a>
+          </div>
+        </article>
+
+        <!-- Publication 3 -->
+        <article class="pub-card p-5 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 space-y-2.5 shadow-sm">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded text-[11px] font-mono font-medium bg-academic-100 text-academic-800 dark:bg-academic-950 dark:text-academic-300">
+              Bioinformatics
+            </span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400">
+              Journal Paper
+            </span>
+          </div>
+
+          <h4 class="text-base font-serif font-bold text-stone-900 dark:text-stone-50 leading-snug">
+            Simulation and annotation of global acronyms
+          </h4>
+
+          <p class="text-xs text-stone-600 dark:text-stone-400 leading-normal">
+            <strong class="text-stone-900 dark:text-stone-200">Maxim Filimonov</strong>, Daphné Chopard, Irena Spasić
+          </p>
+
+          <p class="text-xs font-serif text-stone-500 dark:text-stone-400 italic">
+            Bioinformatics, Volume 38, Issue 11, June 2022, Pages 3136&ndash;3138, 2022.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3 pt-2 text-xs font-medium">
+            <span class="text-stone-300 dark:text-stone-700">&bull;</span>
+            <a href="https://doi.org/10.1093/bioinformatics/btac298" target="_blank" rel="noopener noreferrer" class="text-academic-700 dark:text-academic-400 hover:underline">
+              <i class="fa-solid fa-file-pdf mr-1"></i> Paper DOI
+            </a>
+          </div>
+        </article>
+
+        <!-- Publication 4 -->
+        <article class="pub-card p-5 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 space-y-2.5 shadow-sm">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded text-[11px] font-mono font-medium bg-academic-100 text-academic-800 dark:bg-academic-950 dark:text-academic-300">
+              JMIR Formative Research
+            </span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400">
+              Journal Paper
+            </span>
+          </div>
+
+          <h4 class="text-base font-serif font-bold text-stone-900 dark:text-stone-50 leading-snug">
+            Assessing the Feasibility of Using Parents Social Media Conversations to Inform Burn First Aid Interventions: Mixed Methods Study
+          </h4>
+
+          <p class="text-xs text-stone-600 dark:text-stone-400 leading-normal">
+            Verity Bennet, Irena Spasić,  <strong class="text-stone-900 dark:text-stone-200">Maxim Filimonov</strong>, Vigneshwaran Muralidaran, Alison Mary Kemp, Stuart Allen, William John Watkins
+          </p>
+
+          <p class="text-xs font-serif text-stone-500 dark:text-stone-400 italic">
+            JMIR Form Res, 2024.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3 pt-2 text-xs font-medium">
+            <span class="text-stone-300 dark:text-stone-700">&bull;</span>
+            <a href="https://doi.org/10.2196/48695" target="_blank" rel="noopener noreferrer" class="text-academic-700 dark:text-academic-400 hover:underline">
+              <i class="fa-solid fa-file-pdf mr-1"></i> Paper DOI
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Section 5: Contact Details -->
+    <footer id="contact" class="pt-8 pb-12 border-t border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-400 text-xs">
+      <div class="space-y-6">
+        <div>
+          <h2 class="text-xs uppercase tracking-widest font-semibold text-academic-700 dark:text-academic-400 font-mono mb-1">
+            Communication & Location
+          </h2>
+          <h3 class="text-2xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-2">
+            Contact Details
+          </h3>
+          <p class="text-stone-600 dark:text-stone-400 max-w-xl text-sm leading-relaxed">
+            If you have any questions feel free to reach out via email.
+          </p>
+        </div>
+
+        <!-- Contact Matrix -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2 text-xs">
+          <div class="p-3.5 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900">
+            <span class="block text-stone-400 dark:text-stone-500 font-mono uppercase text-[10px] tracking-wider mb-1">Email</span>
+            <a class="font-medium text-academic-700 dark:text-academic-400 hover:underline">
+              FilimonovM [at] cardiff [dot] ac [dot] uk
+            </a>
+          </div>
+
+          <div class="p-3.5 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900">
+            <span class="block text-stone-400 dark:text-stone-500 font-mono uppercase text-[10px] tracking-wider mb-1">Location</span>
+            <span class="font-medium text-stone-800 dark:text-stone-200">
+              Cardiff University
+            </span>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pt-6 border-t border-stone-200/80 dark:border-stone-800/80 gap-3">
+          <p>&copy; <span id="yearSpan">2026</span> Maxim Filimonov. Hosted with GitHub Pages.</p>
+          <a href="#about" class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 transition-colors">
+            Back to top &uarr;
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // 1. Year update with fallback
+    const yearSpan = document.getElementById('yearSpan');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+
+    // 2. Light / Dark Theme Management
+    const themeToggle = document.getElementById('themeToggle');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+
+    function applyTheme(isDark) {
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+        if (sunIcon) sunIcon.classList.remove('hidden');
+        if (moonIcon) moonIcon.classList.add('hidden');
+      } else {
+        document.documentElement.classList.remove('dark');
+        if (sunIcon) sunIcon.classList.add('hidden');
+        if (moonIcon) moonIcon.classList.remove('hidden');
+      }
+    }
+
+    // Read stored theme preference or match system
+    const savedTheme = localStorage.getItem('academic-theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+    applyTheme(initialDark);
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('academic-theme', isDark ? 'dark' : 'light');
+        applyTheme(isDark);
+      });
+    }
+
+    // 3. Mobile Navigation Toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (mobileMenu) mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // 4. BibTeX Expansion and Clipboard Copy
+    document.querySelectorAll('.bibtex-toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card = btn.closest('.pub-card');
+        if (card) {
+          const panel = card.querySelector('.bibtex-panel');
+          if (panel) panel.classList.toggle('hidden');
+        }
+      });
+    });
+
+    document.querySelectorAll('.copy-bibtex-btn').forEach(copyBtn => {
+      copyBtn.addEventListener('click', () => {
+        const codeElem = copyBtn.nextElementSibling?.querySelector('code');
+        if (!codeElem) return;
+        const codeText = codeElem.innerText;
+
+        // Clipboard copy using fallback-safe execCommand
+        const tempTextArea = document.createElement('textarea');
+        tempTextArea.value = codeText;
+        tempTextArea.style.position = 'fixed';
+        tempTextArea.style.opacity = '0';
+        document.body.appendChild(tempTextArea);
+        tempTextArea.select();
+
+        try {
+          document.execCommand('copy');
+          copyBtn.textContent = 'Copied!';
+          setTimeout(() => { copyBtn.textContent = 'Copy'; }, 2000);
+        } catch (err) {
+          console.error('Failed to copy BibTeX: ', err);
+        } finally {
+          document.body.removeChild(tempTextArea);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
